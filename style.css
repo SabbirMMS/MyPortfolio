@@ -58,6 +58,7 @@ header {
   display: flex;
   gap: 12px;
 }
+/* 
 .options > a {
   text-decoration: none;
   border-radius: 12px;
@@ -70,12 +71,22 @@ header {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 21px; /* 150% */
+  line-height: 21px;
   letter-spacing: 0.21px;
 }
 .options > a:nth-child(2) {
   background-color: #1a80e5;
   color: white;
+} */
+.options > a > img{
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.options >a >img:hover{
+  scale: 1.2;
+  /* box-shadow: 3px 3px 3px 0 #000; */
 }
 
 /* Navigation Starts here */
@@ -196,7 +207,7 @@ nav > ul > li a:hover {
   }
   .options > a {
     text-align: center;
-    min-width: 100px;
+    /* min-width: 100px; */
   }
   nav > ul {
     justify-content: center;
