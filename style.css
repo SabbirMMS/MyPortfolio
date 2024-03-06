@@ -167,6 +167,14 @@ nav > ul > li a:hover {
   overflow: auto;
 }
 
+/* Testimonials */
+.testimonials > h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.testimonials > .skills > .skill{
+  height: auto;
+  width: 300px;
+}
 /* Responsiveness */
 @media screen and (max-width: 1050px) {
   body {
