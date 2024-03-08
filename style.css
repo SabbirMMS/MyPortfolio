@@ -199,3 +199,6 @@ h2 {
   height: auto;
   width: 300px;
 }
+.testimonials p{
+  text-align: justify;
+}
