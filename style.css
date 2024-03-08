@@ -61,9 +61,11 @@ header {
   width: 128px;
   border-radius: 50%;
 }
-.profile > img:hover {
-  border-radius: 0;
-}
+/* .profile > img:hover {
+  border: 1px solid #121417;
+  box-shadow: 2px 2px 2px 0 #121417;
+  scale: 1.1;
+} */
 
 .profile .name > h1 {
   font-size: 22px;
@@ -99,6 +101,10 @@ header {
   font-weight: 700;
   line-height: 21px;
   letter-spacing: 0.21px;
+}
+.options > a:hover{
+  scale: 1.05;
+  box-shadow: 2px 2px 2px 0 #000000;
 }
 /* ViewPortfolio Is Hidden Here */
 /* .options  >a:nth-child(1){
@@ -237,6 +243,7 @@ footer{
 }
 footer > :first-child{
   font-size: 25px;
+  font-family: monospace;
 }
 .footerOptions{
   display: flex;
