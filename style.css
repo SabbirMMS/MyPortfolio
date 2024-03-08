@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Hina+Mincho&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kode+Mono:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Hina+Mincho&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kode+Mono:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
   padding: 0;
@@ -94,6 +94,11 @@ header {
 /* Navigation Starts here */
 nav {
   padding: 16px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
 }
 nav > ul {
   display: flex;
@@ -115,7 +120,7 @@ nav > ul > li a {
   line-height: 21px; /* 150% */
   letter-spacing: 0.21px;
 }
-nav > ul > li:last-child > a {
+nav > ul > li:first-child > a {
   color: var(--textBlack);
 }
 nav > ul:hover > li > a {
@@ -124,9 +129,16 @@ nav > ul:hover > li > a {
 nav > ul > li a:hover {
   color: var(--textBlack);
 }
+nav.sticky{
+    color: #637587;
+}
+nav.sticky:hover {
+    color: var(--textBlack);
+}
+
 /* Top Skills Section */
 
-.topSkills > h2 {
+h2 {
   color: #121417;
   font-feature-settings: "dlig" on;
   font-size: 22px;
@@ -186,28 +198,4 @@ nav > ul > li a:hover {
 .testimonials > .skills > .skill {
   height: auto;
   width: 300px;
-}
-/* Responsiveness */
-@media screen and (max-width: 1050px) {
-  body {
-    padding: 12px;
-  }
-}
-@media screen and (max-width: 700px) {
-  header {
-    flex-direction: column;
-  }
-  .profile {
-    flex-direction: column;
-  }
-  .profile > .name {
-    text-align: center;
-  }
-  .options > a {
-    text-align: center;
-    /* min-width: 100px; */
-  }
-  nav > ul {
-    justify-content: center;
-  }
 }

@@ -1,0 +1,40 @@
+.educations {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+.education {
+  display: flex;
+  flex: 1 0 auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid #d9e2eb;
+  padding: 2px 5px;
+}
+.education:hover {
+  scale: 1.02;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px 0 black;
+}
+.education > img {
+  height: 60px;
+  width: 60px;
+  padding: 5px;
+  background-color: #d9e2eb;
+}
+.info > h3 {
+  color: #121417;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.info > p {
+  color: #637587;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+  overflow: auto;
+}
