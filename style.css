@@ -100,6 +100,10 @@ header {
   line-height: 21px;
   letter-spacing: 0.21px;
 }
+/* ViewPortfolio Is Hidden Here */
+.options  >a:nth-child(1){
+  display: none;
+}
 .options > a:nth-child(2) {
   background-color: #1a80e5;
   color: white;
