@@ -14,7 +14,7 @@ main {
   --textGray: #637587;
 }
 
-::selection{
+::selection {
   color: white;
   background-color: black;
 }
@@ -102,7 +102,7 @@ header {
   line-height: 21px;
   letter-spacing: 0.21px;
 }
-.options > a:hover{
+.options > a:hover {
   scale: 1.05;
   box-shadow: 2px 2px 2px 0 #000000;
 }
@@ -225,34 +225,51 @@ h2 {
   overflow: auto;
 }
 
-/* Testimonials */
-.testimonials > .skills > .skill {
+/* Recommendations */
+.recommendations > .skills > .skill {
   height: auto;
   width: 300px;
 }
-.testimonials p {
+.authorInfo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.recommendations .authorInfo > img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
+.authorInfo a{
+  text-decoration: none;
+  color: #121417;
+}
+.recommendations > .skills > .skill > hr {
+  width: 100%;
+}
+.recommendations p {
   text-align: justify;
 }
 
 /* Footer */
 
-footer{
+footer {
   /* padding: 32px; */
   padding: 50px 0;
   background-color: #637587;
 }
-footer > :first-child{
+footer > :first-child {
   font-size: 25px;
   font-family: monospace;
 }
-.footerOptions{
+.footerOptions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   align-content: center;
 }
-.footerOptions hr{
+.footerOptions hr {
   height: 30px;
   margin: auto 0;
 }
