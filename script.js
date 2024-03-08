@@ -9,7 +9,7 @@ window.addEventListener("scroll", function () {
 
 // Add this script to your website after the closing body tag
 document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("nav a");
+  const links = document.querySelectorAll("a");
   let topOffset = 120; // Adjust for larger screens
 
   const adjustOffsetForSmallScreens = () => {
@@ -33,4 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+});
+
+window.addEventListener('scroll', function() {
+  const scrolled = window.scrollY > 100; // Show after scrolling 100px
+  document.body.classList.toggle('scrolled', scrolled);
 });

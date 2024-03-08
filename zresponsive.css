@@ -1,10 +1,13 @@
 /* Responsiveness */
 @media screen and (max-width: 1050px) {
-  body {
+  .myBody {
     padding: 12px;
   }
 }
 @media screen and (max-width: 700px) {
+  .myBody{
+    padding: 10px;
+  }
   header {
     flex-direction: column;
   }
