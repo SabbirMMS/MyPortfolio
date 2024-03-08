@@ -101,9 +101,9 @@ header {
   letter-spacing: 0.21px;
 }
 /* ViewPortfolio Is Hidden Here */
-.options  >a:nth-child(1){
+/* .options  >a:nth-child(1){
   display: none;
-}
+} */
 .options > a:nth-child(2) {
   background-color: #1a80e5;
   color: white;
@@ -235,12 +235,19 @@ footer{
   padding: 50px 0;
   background-color: #637587;
 }
+footer > :first-child{
+  font-size: 25px;
+}
 .footerOptions{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   align-content: center;
+}
+.footerOptions hr{
+  height: 30px;
+  margin: auto 0;
 }
 .footerOptions > a > img {
   flex: 1 0 auto;

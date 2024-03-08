@@ -1,3 +1,4 @@
+// Sticky Window for nav manus
 window.addEventListener("scroll", function () {
   var nav = document.querySelector("nav");
   if (window.scrollY > 0) {
@@ -7,9 +8,19 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Add this script to your website after the closing body tag
+// For anchor smooth scrolling
 document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("a");
+  // Process1
+  // const links = document.querySelectorAll("nav a");
+  // Process2
+  //const topLink = document.querySelector("a.absCorner[href='#top']");
+  //Process3
+  const linksToSmoothScroll = [
+    "nav a",
+    "a.absCorner[href='#top']",
+    ".options a[href='#hireMe']",
+  ]; // Add more selectors as needed
+
   let topOffset = 120; // Adjust for larger screens
 
   const adjustOffsetForSmallScreens = () => {
@@ -23,19 +34,24 @@ document.addEventListener("DOMContentLoaded", function () {
   adjustOffsetForSmallScreens();
   window.addEventListener("resize", adjustOffsetForSmallScreens); // Update offset on resize
 
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetSection = document.querySelector(this.hash);
-      if (targetSection) {
-        const adjustedY = targetSection.offsetTop - topOffset;
-        window.scrollTo({ top: adjustedY, behavior: "smooth" });
-      }
+  linksToSmoothScroll.forEach((selector) => {
+    const links = document.querySelectorAll(selector);
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetSection = this.hash ? document.querySelector(this.hash) : document.getElementById("top"); // Use "this.hash" for anchors within the page, otherwise try "top" ID
+        if (targetSection) {
+          const adjustedY = targetSection.offsetTop - topOffset;
+          window.scrollTo({ top: adjustedY, behavior: "smooth" });
+        }
+      });
     });
   });
 });
 
+// Showing  go to top button fixed bottom right
 window.addEventListener('scroll', function() {
   const scrolled = window.scrollY > 100; // Show after scrolling 100px
   document.body.classList.toggle('scrolled', scrolled);
 });
+
