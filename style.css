@@ -13,6 +13,11 @@ main {
   --textBlack: #121417;
   --textGray: #637587;
 }
+
+::selection{
+  color: white;
+  background-color: black;
+}
 .absCorner {
   position: fixed;
   margin: 20px;
@@ -24,6 +29,8 @@ main {
 
 .absCorner > img {
   height: 40px;
+  border: 1px solid white;
+  border-radius: 50px;
 }
 
 /* Show the element when scrolled past a certain point */
@@ -224,10 +231,6 @@ footer{
   padding: 50px 100px;
   background-color: #637587;
 }
-footer p {
-  margin-top: 20px;
-  text-align: center;
-}
 .footerOptions{
   display: flex;
   gap: 10px;
@@ -245,4 +248,11 @@ footer p {
 .footerOptions > a > img:hover {
   scale: 1.2;
   /* box-shadow: 3px 3px 3px 0 #000; */
+}
+
+footer p {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }
