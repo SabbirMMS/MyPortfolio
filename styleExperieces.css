@@ -7,14 +7,18 @@
 }
 .experiences{
     display: flex;
-    flex-wrap: wrap;
     gap: 12px;
+    flex-wrap: wrap;
+    padding: 16px;
 }
 .experience{
-    padding: 12px;
+    padding: 16px;
     flex: 1 0 auto;
+    align-items: flex-start;
     border: 1px solid #d9e2eb;
-    width: 400px;
+    width: 200px;
+    height: 230px;
+    overflow: auto;
 }
 .experience:hover{
     scale: 1.02;
