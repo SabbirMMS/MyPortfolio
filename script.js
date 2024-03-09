@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const adjustOffsetForSmallScreens = () => {
     if (window.innerWidth <= 700) {
-      topOffset = 80; // Adjust for smaller screens (700px max-width)
+      topOffset = 100; // Adjust for smaller screens (700px max-width)
     } else {
       topOffset = 40; // Reset for larger screens
     }
