@@ -1,0 +1,64 @@
+/* ------------ */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 12px;
+  padding: 16px;
+}
+.projects img {
+  height: 180px;
+  width: 100%;
+  /* flex: 1 0 auto; */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.project {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 8px;
+  border: 1px solid #dbe0e5;
+  background: #fff;
+}
+.projects .project:hover {
+  scale: 1.01;
+  box-shadow: 1px 1px 2px 0 #000000;
+}
+.project :not(img, span) {
+  padding: 0 12px 10px;
+}
+
+.project p {
+  color: #637587;
+  font-size: small;
+}
+.aboutProject {
+  color: #121417;
+  font-size: 0.9rem;
+}
+.project .aboutProject {
+  text-align: start;
+}
+.project > a {
+  text-decoration: none;
+  border-radius: 12px;
+  background: #637587;
+  padding: 12px 24px 12px 12px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto 12px;
+  flex-shrink: 0;
+  color: white;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.21px;
+}
+.project > a:hover {
+  transform: scale(1.05);
+  background: #121417;
+}

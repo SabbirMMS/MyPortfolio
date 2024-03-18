@@ -1,22 +1,22 @@
-.allLanguages{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.allLanguages {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-.language{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 16px 16px;
+.language {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 16px 16px;
 }
-.language ul{
-    padding: 0 16px;
+.language ul {
+  padding: 0 16px;
 }
-.language ul li{
-    list-style: circle;
-    color: #121417;
-    font-weight: bold;
+.language ul li {
+  list-style: circle;
+  color: #121417;
+  font-weight: bold;
 }
-.language span{
-    color: coral;
-    margin-left: 30px;
+.language span {
+  color: coral;
+  margin-left: 30px;
 }
