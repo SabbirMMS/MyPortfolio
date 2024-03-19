@@ -39,7 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     links.forEach((link) => {
       link.addEventListener("click", function (e) {
         e.preventDefault();
-        const targetSection = this.hash ? document.querySelector(this.hash) : document.getElementById("top"); // Use "this.hash" for anchors within the page, otherwise try "top" ID
+        const targetSection = this.hash
+          ? document.querySelector(this.hash)
+          : document.getElementById("top"); // Use "this.hash" for anchors within the page, otherwise try "top" ID
         if (targetSection) {
           const adjustedY = targetSection.offsetTop - topOffset;
           window.scrollTo({ top: adjustedY, behavior: "smooth" });
@@ -50,8 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Showing  go to top button fixed bottom right
-window.addEventListener('scroll', function() {
+window.addEventListener("scroll", function () {
   const scrolled = window.scrollY > 100; // Show after scrolling 100px
-  document.body.classList.toggle('scrolled', scrolled);
+  document.body.classList.toggle("scrolled", scrolled);
 });
 
+// Footer Copyright
+window.addEventListener("DOMContentLoaded", function () {
+  // Get the current year
+  const currentYear = new Date().getFullYear();
+  // Update the text content of the span element with the current year
+  document.getElementById("currentYear").textContent = currentYear;
+});

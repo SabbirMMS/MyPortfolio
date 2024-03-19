@@ -27,12 +27,13 @@
   box-shadow: 1px 1px 2px 0 #000000;
 }
 .project :not(img, span) {
-  padding: 0 12px 10px;
+  padding: 0 12px ;
 }
 
 .project p {
   color: #637587;
   font-size: small;
+  text-align: start;
 }
 .aboutProject {
   color: #121417;
@@ -41,7 +42,7 @@
 .project .aboutProject {
   text-align: start;
 }
-.project > a {
+.project a {
   text-decoration: none;
   border-radius: 12px;
   background: #637587;
@@ -58,7 +59,13 @@
   line-height: 21px;
   letter-spacing: 0.21px;
 }
-.project > a:hover {
+.aWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+.project a:hover {
   transform: scale(1.05);
   background: #121417;
 }
