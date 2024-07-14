@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume</title>
     <style>
-        /* Toast message styling */
-        #toast {
-            visibility: hidden; 
-            min-width: 250px;
-            margin-left: -125px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 2px;
-            position: fixed;
-            z-index: 1;
-            left: 50%;
-            bottom: 30px;
-            font-size: 17px;
-            padding: 16px;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
+      /* Toast message styling */
+      #toast {
+        visibility: hidden;
+        min-width: 250px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+        padding: 16px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        transform: translateX(-50%);
+      }
 
-        #toast.show {
-            visibility: visible;
-            opacity: 1;
-        }
+      #toast.show {
+        visibility: visible;
+        opacity: 1;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <iframe
-        id="resumeIframe"
-        src="https://1drv.ms/w/c/2bdc7b382e04c951/IQNDGiox-ddsR41XdgVOlZlZAXlBaDAiLKo7muqNjutfrcs"
-        frameborder="0"
-        style="width: 100%; height: 100vh"
+      id="resumeIframe"
+      src="https://1drv.ms/w/c/2bdc7b382e04c951/IQNDGiox-ddsR41XdgVOlZlZAXlBaDAiLKo7muqNjutfrcs"
+      frameborder="0"
+      style="width: 100%; height: 100vh"
     ></iframe>
 
     <!-- Toast message container -->
     <div id="toast"></div>
 
     <script>
-        // Function to show the toast message
-        function showToast(message) {
-            var toast = document.getElementById("toast");
-            toast.innerText = message;
-            toast.className = "show";
-            setTimeout(function() {
-                toast.className = toast.className.replace("show", "");
-            }, 5000); // Toast message visible for 5 seconds
-        }
+      // Function to show the toast message
+      function showToast(message) {
+        var toast = document.getElementById("toast");
+        toast.innerText = message;
+        toast.className = "show";
+        setTimeout(function () {
+          toast.className = toast.className.replace("show", "");
+        }, 5000); // Toast message visible for 5 seconds
+      }
 
-        // Show the initial loading toast message
-        showToast("Loading...");
+      // Show the initial loading toast message
+      showToast("Loading...");
 
-        // Get the iframe element
-        var iframe = document.getElementById('resumeIframe');
+      // Get the iframe element
+      var iframe = document.getElementById("resumeIframe");
 
-        // Add an event listener for the load event on the iframe
-        iframe.addEventListener('load', function() {
-            // Hide the loading toast immediately
-            var toast = document.getElementById("toast");
-            toast.className = toast.className.replace("show", "");
+      // Add an event listener for the load event on the iframe
+      iframe.addEventListener("load", function () {
+        // Hide the loading toast immediately
+        var toast = document.getElementById("toast");
+        toast.className = toast.className.replace("show", "");
 
-            // Show the print instructions toast after 3 seconds
-            setTimeout(function() {
-                showToast("To print or save this document as a PDF, please press Ctrl+P.");
-            }, 3000); // 3000 milliseconds = 3 seconds after hiding the loading toast
-        });
+        // Show the print instructions toast after 3 seconds
+        setTimeout(function () {
+          showToast(
+            "To print or save this document as a PDF, please press Ctrl+P."
+          );
+        }, 3000); // 3000 milliseconds = 3 seconds after hiding the loading toast
+      });
     </script>
-</body>
+  </body>
 </html>
